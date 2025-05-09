@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="Student.Pages.ServersPage"
+    Color="Transparent">
+
+    <Frame Padding="15" CornerRadius="15" BackgroundColor="White" BorderColor="Transparent" WidthRequest="350"
+                HasShadow="True" VerticalOptions="Center" HorizontalOptions="Center">
+        <VerticalStackLayout Spacing="25">
+            <Label Text="Lütfen bir sunucu seçin:" FontSize="Medium" HorizontalOptions="Center" />
+            <HorizontalStackLayout>
+                <SearchBar x:Name="searchBar" Placeholder="Yurt adını ara..." TextChanged="searchBar_TextChanged" WidthRequest="250" HeightRequest="50" Margin="0,0,5,0"/>
+                <Button x:Name="buttonConnect" Text="Bağlan" Clicked="buttonConnect_Clicked" VerticalOptions="Center" WidthRequest="60" HeightRequest="30" Padding="0"/>
+            </HorizontalStackLayout>
+            <CollectionView x:Name="collectionServers" ItemsSource="{Binding Servers}" HeightRequest="450">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Button x:Name="buttonServer" Clicked="buttonServer_Clicked" Padding="4" Margin="2" Text="{Binding Name}" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="#1F859F"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </Frame>
+</toolkit:Popup>

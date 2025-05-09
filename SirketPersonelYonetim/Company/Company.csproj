@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38774DC1-2E59-449E-A7FC-512D77FC74E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Company</RootNamespace>
+    <AssemblyName>Company</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Company.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompanyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DepartmanOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DepartmanOperation.Designer.cs">
+      <DependentUpon>DepartmanOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DepartmanTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DepartmanTablosu.Designer.cs">
+      <DependentUpon>DepartmanTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelOperations.Designer.cs">
+      <DependentUpon>PersonelOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelProfile.Designer.cs">
+      <DependentUpon>PersonelProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ProjeOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ProjeOperation.Designer.cs">
+      <DependentUpon>ProjeOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ProjeTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ProjeTablosu.Designer.cs">
+      <DependentUpon>ProjeTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YoneticiAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YoneticiAyarlari.Designer.cs">
+      <DependentUpon>YoneticiAyarlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Formlar\DepartmanOperation.resx">
+      <DependentUpon>DepartmanOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\DepartmanTablosu.resx">
+      <DependentUpon>DepartmanTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelOperations.resx">
+      <DependentUpon>PersonelOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelProfile.resx">
+      <DependentUpon>PersonelProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ProjeOperation.resx">
+      <DependentUpon>ProjeOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ProjeTablosu.resx">
+      <DependentUpon>ProjeTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YoneticiAyarlari.resx">
+      <DependentUpon>YoneticiAyarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="CompanyDataSet.xsc">
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDataSet.xss">
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\006-user-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\002-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\departman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\cells.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\projecttable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\logoexample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\visibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\004-add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\005-user-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\001-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\003-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\search-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\add-project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\find-project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\edit-project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resimler\delete-project.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
